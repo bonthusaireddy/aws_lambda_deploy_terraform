@@ -1,6 +1,6 @@
 variable "aws_default_region" {
   type = string
-  default = ""
+  default = "ap-south-1"
 }
 
 variable "s3_bucket" {
