@@ -12,3 +12,4 @@ module "lambda" {
   s3_object_version         = data.aws_s3_object.lambda.version_id
 }
 
+
