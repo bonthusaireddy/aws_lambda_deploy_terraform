@@ -69,3 +69,22 @@ variable "iam_lambda_policy" {
 }
 EOF
 }
+
+# s3
+variable "s3_bucket_create_name" {
+  type = string
+  default = "my-tf-test-bucket-saireddy"
+}
+
+variable "s3_bucket_tags" {
+  type = any
+  default = {
+    "Name"        = "My bucket"
+    "Environment" = "Dev"
+  }
+}
+
+variable "aws_s3_bucket_acl" {
+  type = string
+  default = "private"
+}

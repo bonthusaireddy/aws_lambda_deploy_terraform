@@ -12,4 +12,9 @@ module "lambda" {
   s3_object_version         = data.aws_s3_object.lambda.version_id
 }
 
-
+module "s3" {
+  source = "./s3"
+  s3_bucket_create_name     = var.s3_bucket_create_name
+  s3_bucket_tags            = var.s3_bucket_tags
+  aws_s3_bucket_acl         = var.aws_s3_bucket_acl
+}
